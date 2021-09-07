@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EAEZ,eAAe,EAAE,IAAI;EACrB,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,EAAE;EAEV,SAAS,EAAE,QAAQ;EACnB,cAAc,EAAE,UAAU;CAC3B",
+    "sources": [
+        "Stocks.module.scss"
+    ],
+    "names": [],
+    "file": "Stocks.module.css"
+}

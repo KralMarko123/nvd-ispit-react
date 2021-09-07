@@ -1,0 +1,16 @@
+.Card {
+  width: 100%;
+  height: fit-content;
+
+  padding: 2em;
+  margin: 1em;
+
+  background-color: transparent;
+  border: 2px solid rgb(161, 155, 155);
+  border-radius: 10px;
+
+  h1 {
+    color: #333533;
+    font-weight: 600;
+  }
+}

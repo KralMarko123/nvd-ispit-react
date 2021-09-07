@@ -1,0 +1,22 @@
+.holdings {
+  width: 100%;
+  height: 100%;
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0%;
+
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+
+.holdingsValue {
+  font-size: 1.8rem;
+  margin-top: 0.5em;
+  text-align: center;
+
+  span {
+    font-weight: bold;
+    color: rgb(104, 133, 55);
+  }
+}

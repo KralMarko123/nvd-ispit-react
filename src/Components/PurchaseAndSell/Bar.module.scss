@@ -1,0 +1,35 @@
+.Bar {
+  width: 100%;
+  margin-top: 1.025em;
+  margin-bottom: 1.025em;
+
+  font-size: 1.025rem;
+
+  input,
+  select {
+    width: fit-content;
+    min-width: 200px;
+    font-size: 1.025rem;
+    padding: 0.5em;
+    outline: none;
+    border: solid 2px #ccc;
+  }
+
+  button {
+    width: 15%;
+    margin-left: 1.125%;
+    font-size: 1.125rem;
+    padding: 0.75em;
+    background-color: darkolivegreen;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 0px 20px -10px darkslategray;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.85;
+      letter-spacing: 1.625px;
+    }
+  }
+}

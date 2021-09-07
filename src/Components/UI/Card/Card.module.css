@@ -1,0 +1,17 @@
+.Card {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2em;
+  margin: 1em;
+  background-color: transparent;
+  border: 2px solid #a19b9b;
+  border-radius: 10px;
+}
+
+.Card h1 {
+  color: #333533;
+  font-weight: 600;
+}
+/*# sourceMappingURL=Card.module.css.map */

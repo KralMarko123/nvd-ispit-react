@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;EAEnB,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,qBAAqB;EACvC,eAAe,EAAE,QAAQ;EACzB,OAAO,EAAE,OAAO;EAChB,UAAU,EAAE,OAAO;CAMpB;;AAfD,AAWE,MAXI,CAWJ,CAAC,CAAC;EACA,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,OAAO;CACnB",
+    "sources": [
+        "Stock.module.scss"
+    ],
+    "names": [],
+    "file": "Stock.module.css"
+}

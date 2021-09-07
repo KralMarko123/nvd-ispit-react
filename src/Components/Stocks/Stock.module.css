@@ -1,0 +1,22 @@
+.stock {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid rgba(59, 58, 58, 0.5);
+  border-collapse: collapse;
+  padding: 0.625em;
+  margin-top: 0.625em;
+}
+
+.stock p {
+  width: 100%;
+  font-size: 1.25rem;
+}
+/*# sourceMappingURL=Stock.module.css.map */
