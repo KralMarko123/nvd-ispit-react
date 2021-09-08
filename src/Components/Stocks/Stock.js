@@ -7,7 +7,7 @@ const Stock = (props) => {
   return (
     <li className={styles.stock}>
       <p>{companyName}</p>
-      <p>${companyPrice}</p>
+      <p>${companyPrice.toFixed(2)}</p>
     </li>
   );
 };
