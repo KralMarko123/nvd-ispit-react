@@ -14,6 +14,10 @@ const Card = (props) => {
     props.onPurchase(newShares);
   }
 
+  function sellHandler(newShares) {
+    props.onSell(newShares);
+  }
+
   return (
     <div className={styles.Card}>
       <h1>{cardTitle}</h1>
@@ -26,7 +30,12 @@ const Card = (props) => {
         />
       )}
       {cardTitle === "Purchase and Sell Stocks" && (
-        <PurchaseAndSell companies={companies} onPurchase={purchaseHandler} />
+        <PurchaseAndSell
+          companies={companies}
+          holdings={holdings}
+          onPurchase={purchaseHandler}
+          onSell={sellHandler}
+        />
       )}
     </div>
   );

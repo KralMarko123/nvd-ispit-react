@@ -14,3 +14,16 @@
     font-size: 1.25rem;
   }
 }
+
+@media (max-width: 1279px) {
+  .holding {
+    padding: 0.325em;
+    margin-top: 0.425em;
+    justify-content: space-between;
+
+    p {
+      width: auto;
+      font-size: 1rem;
+    }
+  }
+}

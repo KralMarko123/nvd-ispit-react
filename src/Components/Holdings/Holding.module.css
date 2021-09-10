@@ -19,4 +19,18 @@
   width: 100%;
   font-size: 1.25rem;
 }
+
+@media (max-width: 1279px) {
+  .holding {
+    padding: 0.325em;
+    margin-top: 0.425em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .holding p {
+    width: auto;
+    font-size: 1rem;
+  }
+}
 /*# sourceMappingURL=Holding.module.css.map */

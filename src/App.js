@@ -55,7 +55,22 @@ function App(props) {
     let newArray = [...holdingsArray];
     newArray.forEach((element) => {
       if (element.name === newShares.name) {
-        element.shares += parseInt(newShares.shares);
+        element.shares += parseFloat(newShares.shares);
+      }
+    });
+    setHoldingsArray(newArray);
+    calculateNewHoldingsValue();
+  }
+
+  function sellHandler(newShares) {
+    let newArray = [...holdingsArray];
+    newArray.forEach((element) => {
+      if (element.name === newShares.name) {
+        if (element.shares - parseFloat(newShares.shares) < 0) {
+          element.shares = 0;
+        } else {
+          element.shares -= parseFloat(newShares.shares);
+        }
       }
     });
     setHoldingsArray(newArray);
@@ -66,8 +81,9 @@ function App(props) {
     let holdingsSum = 0;
     for (let i = 0; i < holdingsArray.length; i++) {
       holdingsSum +=
-        parseInt(companyArray[i].price) * parseInt(holdingsArray[i].shares);
+        parseFloat(companyArray[i].price) * parseFloat(holdingsArray[i].shares);
     }
+
     setHoldingsValue(holdingsSum);
   }
 
@@ -85,8 +101,10 @@ function App(props) {
       <div className={styles.row}>
         <Card
           companies={companyArray}
+          holdings={holdingsArray}
           title={Titles.title3}
           onPurchase={purchaseHandler}
+          onSell={sellHandler}
         ></Card>
       </div>
     </div>

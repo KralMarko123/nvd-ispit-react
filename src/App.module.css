@@ -34,4 +34,13 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+@media (max-width: 1279px) {
+  .App .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /*# sourceMappingURL=App.module.css.map */

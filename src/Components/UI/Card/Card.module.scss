@@ -14,3 +14,14 @@
     font-weight: 600;
   }
 }
+
+@media (max-width: 1279px) {
+  .Card {
+    padding: 1em;
+    margin: 0.625em;
+
+    h1 {
+      font-size: 1.225rem;
+    }
+  }
+}

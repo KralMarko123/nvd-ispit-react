@@ -36,7 +36,7 @@ const PurchaseBar = (props) => {
         step="0"
         onChange={shareNumberHandler}
       />{" "}
-      shares of{" "}
+      Shares of{" "}
       <select name="companyName" onChange={companyNameHandler}>
         <option hidden></option>
         <option>IBM</option>

@@ -18,4 +18,14 @@
   font-weight: bold;
   color: #688537;
 }
+
+@media (max-width: 1279px) {
+  .holdings {
+    font-size: 1rem;
+  }
+  .holdingsValue {
+    font-size: 1.25rem;
+    margin-top: 0.25em;
+  }
+}
 /*# sourceMappingURL=Holdings.module.css.map */

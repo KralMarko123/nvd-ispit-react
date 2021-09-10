@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Holdings = (props) => {
   const companies = props.companies;
   const holdings = props.holdings;
-  const holdingsValue = props.holdingsValue;
+  const holdingsValue = props.holdingsValue.toFixed(2);
 
   return (
     <div>
@@ -28,7 +28,7 @@ const Holdings = (props) => {
         ></Holding>
       </ul>
       <p className={styles.holdingsValue}>
-        Total value of holdings: <span>${holdingsValue.toFixed(2)}</span>
+        Total value of holdings: <span>${holdingsValue}</span>
       </p>
     </div>
   );

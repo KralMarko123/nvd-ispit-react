@@ -6,4 +6,14 @@
 .PurchaseAndSell p {
   font-size: 1.425rem;
 }
+
+@media (max-width: 1279px) {
+  .PurchaseAndSell {
+    font-size: 1rem;
+  }
+  .PurchaseAndSell p {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=PurchaseAndSell.module.css.map */
