@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/KralMarko123/nvd-ispit-react.git/static/css/main.6bf80564.chunk.css",
+    "main.js": "/KralMarko123/nvd-ispit-react.git/static/js/main.a4bb87fe.chunk.js",
+    "main.js.map": "/KralMarko123/nvd-ispit-react.git/static/js/main.a4bb87fe.chunk.js.map",
+    "runtime-main.js": "/KralMarko123/nvd-ispit-react.git/static/js/runtime-main.cea097fc.js",
+    "runtime-main.js.map": "/KralMarko123/nvd-ispit-react.git/static/js/runtime-main.cea097fc.js.map",
+    "static/js/2.0721bcbc.chunk.js": "/KralMarko123/nvd-ispit-react.git/static/js/2.0721bcbc.chunk.js",
+    "static/js/2.0721bcbc.chunk.js.map": "/KralMarko123/nvd-ispit-react.git/static/js/2.0721bcbc.chunk.js.map",
+    "static/js/3.8dea20e5.chunk.js": "/KralMarko123/nvd-ispit-react.git/static/js/3.8dea20e5.chunk.js",
+    "static/js/3.8dea20e5.chunk.js.map": "/KralMarko123/nvd-ispit-react.git/static/js/3.8dea20e5.chunk.js.map",
+    "index.html": "/KralMarko123/nvd-ispit-react.git/index.html",
+    "static/css/main.6bf80564.chunk.css.map": "/KralMarko123/nvd-ispit-react.git/static/css/main.6bf80564.chunk.css.map",
+    "static/js/2.0721bcbc.chunk.js.LICENSE.txt": "/KralMarko123/nvd-ispit-react.git/static/js/2.0721bcbc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cea097fc.js",
+    "static/js/2.0721bcbc.chunk.js",
+    "static/css/main.6bf80564.chunk.css",
+    "static/js/main.a4bb87fe.chunk.js"
+  ]
+}
