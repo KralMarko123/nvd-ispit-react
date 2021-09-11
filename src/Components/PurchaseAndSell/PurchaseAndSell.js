@@ -4,6 +4,7 @@ import SellBar from "./SellBar";
 import styles from "./PurchaseAndSell.module.css";
 
 const PurchaseAndSell = ({ companies, holdings, onPurchase, onSell }) => {
+  /*VARIABLES*/
   const [cash, setCash] = useState(1000);
 
   /*HANDLERS*/
@@ -35,11 +36,8 @@ const PurchaseAndSell = ({ companies, holdings, onPurchase, onSell }) => {
 
   return (
     <div className={styles.PurchaseAndSell}>
-      <PurchaseBar
-        companies={companies}
-        onPurchase={purchaseHandler}
-      ></PurchaseBar>
-      <SellBar companies={companies} onSell={sellHandler}></SellBar>
+      <PurchaseBar companies={companies} onPurchase={purchaseHandler} />
+      <SellBar companies={companies} onSell={sellHandler} />
       <p>You currently have ${cash.toFixed(2)} in cash</p>
     </div>
   );

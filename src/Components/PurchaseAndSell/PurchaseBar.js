@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styles from "./Bar.module.css";
 
-const PurchaseBar = (props) => {
-  const [shares, setShares] = useState(0);
+const PurchaseBar = ({ onPurchase }) => {
+  const [shares, setShares] = useState("");
   const [selectedCompany, setSelectedCompany] = useState("");
 
   /**HANDLERS */
@@ -22,7 +22,9 @@ const PurchaseBar = (props) => {
         name: selectedCompany,
         shares: shares,
       };
-      props.onPurchase(newShares);
+      onPurchase(newShares);
+      setSelectedCompany("");
+      setShares("");
     }
   };
 
@@ -32,12 +34,17 @@ const PurchaseBar = (props) => {
       <input
         type="number"
         defaultValue=""
+        value={shares}
         min="0"
         step="0"
         onChange={shareNumberHandler}
       />{" "}
       Shares of{" "}
-      <select name="companyName" onChange={companyNameHandler}>
+      <select
+        name="companyName"
+        onChange={companyNameHandler}
+        value={selectedCompany}
+      >
         <option hidden></option>
         <option>IBM</option>
         <option>Amazon</option>
