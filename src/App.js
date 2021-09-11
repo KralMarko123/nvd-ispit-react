@@ -15,6 +15,7 @@ const App = () => {
     { name: "Microsoft", price: 87.44 },
     { name: "Disney", price: 93.72 },
   ]);
+
   const [holdingsArray, setHoldingsArray] = useState([
     { name: "IBM", shares: 0 },
     { name: "Amazon", shares: 0 },
@@ -22,6 +23,7 @@ const App = () => {
     { name: "Disney", shares: 0 },
   ]);
   const [holdingsValue, setHoldingsValue] = useState(0);
+
   const [timer, setTimer] = useState(false);
 
   /*HANDLERS*/
@@ -82,26 +84,56 @@ const App = () => {
     setHoldingsArray(newArray);
     calculateNewHoldingsValue();
   };
+  const cards = [
+    {
+      cardType: "stocks",
+      companies: companyArray,
+      title: "Stocks",
+      holdings: null,
+      holdingsValue: null,
+    },
+    {
+      cardType: "holdings",
+      companies: companyArray,
+      title: "Holdings",
+      holdings: holdingsArray,
+      holdingsValue: holdingsValue,
+    },
+    {
+      cardType: "purchaseandsell",
+      companies: companyArray,
+      title: "Purchase and Sell Stocks",
+      holdings: holdingsArray,
+      holdingsValue: holdingsValue,
+      onPurchase: purchaseHandler,
+      onSell: sellHandler,
+    },
+  ];
 
   return (
     <div className={styles.App}>
       <div className={styles.row}>
-        <Card companies={companyArray} title="Stocks"></Card>
-        <Card
-          companies={companyArray}
-          title="Holdings"
-          holdings={holdingsArray}
-          holdingsValue={holdingsValue}
-        ></Card>
+        {cards.slice(0, 2).map((card) => (
+          <Card
+            cardType={card.cardType}
+            companies={card.companies}
+            title={card.title}
+            holdings={card.holdings}
+            holdingsValue={card.holdingsValue}
+          />
+        ))}
       </div>
       <div className={styles.row}>
-        <Card
-          companies={companyArray}
-          holdings={holdingsArray}
-          title="Purchase and Sell Stocks"
-          onPurchase={purchaseHandler}
-          onSell={sellHandler}
-        ></Card>
+        {cards.slice(-1).map((card) => (
+          <Card
+            cardType={card.cardType}
+            companies={card.companies}
+            title={card.title}
+            holdings={card.holdings}
+            onPurchase={card.onPurchase}
+            onSell={card.onSell}
+          />
+        ))}
       </div>
     </div>
   );

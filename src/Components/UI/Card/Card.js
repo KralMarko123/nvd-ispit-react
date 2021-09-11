@@ -4,6 +4,7 @@ import Holdings from "../../Holdings/Holdings";
 import PurchaseAndSell from "../../PurchaseAndSell/PurchaseAndSell";
 
 const Card = ({
+  cardType,
   title,
   companies,
   holdings,
@@ -23,15 +24,15 @@ const Card = ({
   return (
     <div className={styles.Card}>
       <h1>{title}</h1>
-      {title === "Stocks" && <Stocks companies={companies} />}
-      {title === "Holdings" && (
+      {cardType === "stocks" && <Stocks companies={companies} />}
+      {cardType === "holdings" && (
         <Holdings
           companies={companies}
           holdings={holdings}
           holdingsValue={holdingsValue}
         />
       )}
-      {title === "Purchase and Sell Stocks" && (
+      {cardType === "purchaseandsell" && (
         <PurchaseAndSell
           companies={companies}
           holdings={holdings}

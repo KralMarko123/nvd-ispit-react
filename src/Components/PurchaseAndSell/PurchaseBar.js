@@ -44,9 +44,7 @@ const PurchaseBar = (props) => {
         <option>Microsoft</option>
         <option>Disney</option>
       </select>
-      <button type="submit" onClick={addedPurchaseHandler}>
-        Purchase
-      </button>
+      <button onClick={addedPurchaseHandler}>Purchase</button>
     </div>
   );
 };

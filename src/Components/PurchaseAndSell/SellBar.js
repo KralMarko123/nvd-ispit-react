@@ -44,9 +44,7 @@ const SellBar = (props) => {
         <option>Microsoft</option>
         <option>Disney</option>
       </select>
-      <button type="submit" onClick={sellHandler}>
-        Sell
-      </button>
+      <button onClick={sellHandler}>Sell</button>
     </div>
   );
 };
