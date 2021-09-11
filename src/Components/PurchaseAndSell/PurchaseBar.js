@@ -2,21 +2,21 @@ import { useState } from "react";
 import styles from "./Bar.module.css";
 
 const PurchaseBar = (props) => {
-  const companies = props.companies;
   const [shares, setShares] = useState(0);
   const [selectedCompany, setSelectedCompany] = useState("");
 
-  function shareNumberHandler(event) {
+  /**HANDLERS */
+  const shareNumberHandler = (event) => {
     let numberOfShares = event.target.value;
     setShares(numberOfShares);
-  }
+  };
 
-  function companyNameHandler(event) {
+  const companyNameHandler = (event) => {
     let companyName = event.target.value;
     setSelectedCompany(companyName);
-  }
+  };
 
-  function addedPurchaseHandler() {
+  const addedPurchaseHandler = () => {
     if (shares !== "" && selectedCompany !== "") {
       const newShares = {
         name: selectedCompany,
@@ -24,7 +24,7 @@ const PurchaseBar = (props) => {
       };
       props.onPurchase(newShares);
     }
-  }
+  };
 
   return (
     <div className={styles.Bar}>

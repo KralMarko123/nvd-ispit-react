@@ -2,34 +2,36 @@ import styles from "./Card.module.css";
 import Stocks from "../../Stocks/Stocks";
 import Holdings from "../../Holdings/Holdings";
 import PurchaseAndSell from "../../PurchaseAndSell/PurchaseAndSell";
-import { useEffect, useState } from "react";
 
-const Card = (props) => {
-  const cardTitle = props.title;
-  const companies = props.companies;
-  const holdings = props.holdings;
-  const holdingsValue = props.holdingsValue;
+const Card = ({
+  title,
+  companies,
+  holdings,
+  holdingsValue,
+  onPurchase,
+  onSell,
+}) => {
+  // HANDLERS
+  const purchaseHandler = (newShares) => {
+    onPurchase(newShares);
+  };
 
-  function purchaseHandler(newShares) {
-    props.onPurchase(newShares);
-  }
-
-  function sellHandler(newShares) {
-    props.onSell(newShares);
-  }
+  const sellHandler = (newShares) => {
+    onSell(newShares);
+  };
 
   return (
     <div className={styles.Card}>
-      <h1>{cardTitle}</h1>
-      {cardTitle === "Stocks" && <Stocks companies={companies} />}
-      {cardTitle === "Holdings" && (
+      <h1>{title}</h1>
+      {title === "Stocks" && <Stocks companies={companies} />}
+      {title === "Holdings" && (
         <Holdings
           companies={companies}
           holdings={holdings}
           holdingsValue={holdingsValue}
         />
       )}
-      {cardTitle === "Purchase and Sell Stocks" && (
+      {title === "Purchase and Sell Stocks" && (
         <PurchaseAndSell
           companies={companies}
           holdings={holdings}

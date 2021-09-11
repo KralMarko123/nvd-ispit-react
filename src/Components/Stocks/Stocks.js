@@ -1,15 +1,12 @@
 import styles from "./Stocks.module.css";
 import Stock from "./Stock";
 
-const Stocks = (props) => {
-  const companies = props.companies;
-
+const Stocks = ({ companies }) => {
   return (
     <ul className={styles.stocks}>
-      <Stock company={companies[0]}></Stock>
-      <Stock company={companies[1]}></Stock>
-      <Stock company={companies[2]}></Stock>
-      <Stock company={companies[3]}></Stock>
+      {companies.map((company) => (
+        <Stock companyName={company.name} companyPrice={company.price} />
+      ))}
     </ul>
   );
 };
