@@ -33,7 +33,6 @@ const PurchaseBar = ({ onPurchase }) => {
       Buy{" "}
       <input
         type="number"
-        defaultValue=""
         value={shares}
         min="0"
         step="0"

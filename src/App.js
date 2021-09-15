@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./App.module.css";
 import Card from "./Components/UI/Card/Card";
 
@@ -26,7 +26,7 @@ const App = () => {
 
   const [timer, setTimer] = useState(false);
 
-  /*HANDLERS*/
+  /*FUNCTIONS*/
   const updatePrices = () => {
     let newArray = [...companyArray];
     newArray.forEach((company) => {
@@ -45,18 +45,35 @@ const App = () => {
     setHoldingsValue(holdingsSum);
   };
 
-  /**TIMER (CAN BE OPTIMISED FOR SURE) */
-  setTimeout(() => {
-    if (!timer) {
-      updatePrices();
-      calculateNewHoldingsValue();
-      setTimer(true);
-    } else {
-      setTimeout(() => {
-        setTimer(false);
+  /* TIMER (CAN BE OPTIMISED FOR SURE) */
+  useEffect(() => {
+    let interval = null;
+    if (timer) {
+      interval = setInterval(() => {
+        updatePrices();
+        calculateNewHoldingsValue();
       }, 2000);
+    } else if (!timer) {
+      clearInterval(interval);
+      setTimer(true);
     }
-  }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  });
+  //OLD TIMER CODE (WASN'T THE RIGHT BEHAVIOR)
+  // setTimeout(() => {
+  //   if (!timer) {
+  //     updatePrices();
+  //     calculateNewHoldingsValue();
+  //     setTimer(true);
+  //   } else {
+  //     setTimeout(() => {
+  //       setTimer(false);
+  //     }, 2000);
+  //   }
+  // }, 2000);
 
   /**HANDLERS */
   const purchaseHandler = (newShares) => {
@@ -115,6 +132,7 @@ const App = () => {
       <div className={styles.row}>
         {cards.slice(0, 2).map((card) => (
           <Card
+            key={card.cardType}
             cardType={card.cardType}
             companies={card.companies}
             title={card.title}
@@ -126,6 +144,7 @@ const App = () => {
       <div className={styles.row}>
         {cards.slice(-1).map((card) => (
           <Card
+            key={card.cardType}
             cardType={card.cardType}
             companies={card.companies}
             title={card.title}

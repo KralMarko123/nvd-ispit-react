@@ -6,7 +6,11 @@ const Holdings = ({ companies, holdings, holdingsValue }) => {
     <div>
       <ul className={styles.holdings}>
         {companies.map((company, index) => (
-          <Holding companyName={company.name} shares={holdings[index].shares} />
+          <Holding
+            key={company.name}
+            companyName={company.name}
+            shares={holdings[index].shares}
+          />
         ))}
       </ul>{" "}
       <p className={styles.holdingsValue}>

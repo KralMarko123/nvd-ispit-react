@@ -5,7 +5,11 @@ const Stocks = ({ companies }) => {
   return (
     <ul className={styles.stocks}>
       {companies.map((company) => (
-        <Stock companyName={company.name} companyPrice={company.price} />
+        <Stock
+          key={company.name}
+          companyName={company.name}
+          companyPrice={company.price}
+        />
       ))}
     </ul>
   );

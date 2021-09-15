@@ -34,7 +34,6 @@ const SellBar = (props) => {
       <input
         type="number"
         value={shares}
-        defaultValue=""
         min="0"
         step="0"
         onChange={shareNumberHandler}
